@@ -37,8 +37,8 @@ jobs:
           go-version: '${{ vars.GOLANG_VERSION }}'
 
       - name: Run tests
-        run: make test-coverage
-
+        run: go test -cover ./...
+  
   build-and-push:
     name: Build and Push Docker Image
     runs-on: ubuntu-latest
